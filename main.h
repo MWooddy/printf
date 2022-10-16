@@ -9,6 +9,15 @@
 #include <stdlib.h>
 */
 
+/*Struct*/
+/*
+typedef struct _dataFormat
+{
+char symbol;
+int (*func)(va_list);
+} _infoStructure;
+*/
+
 /* prototypes for _printf functions */
 int _printf(const char *format, ...); /*Provided Proto Function*/
 int _printChar( /*need to think thr arguments to pass*/);
