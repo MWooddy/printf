@@ -24,7 +24,7 @@ int (*_getFunction(char format))(va_list)
 		{'x', _printHexLower},
 		{'X', _printHexUpper},
 		{'\0', NULL}
-	}
+	};
 
 	while (identifier[count1].symb != '\0')
 	{

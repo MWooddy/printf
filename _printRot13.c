@@ -2,6 +2,7 @@
 
 int _printRot13(va_list R) {
 	char *string;
+	unsigned int i, x, counter = 0;
 	char base[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char chng[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	string = va_arg(R, char *);
