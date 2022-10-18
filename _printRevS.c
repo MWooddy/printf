@@ -1,7 +1,7 @@
 #include "main.h"
 
 /*TODO Betty*/
-_printRevS(va_list rev) {
+int _printRevS(va_list rev) {
 	char *stringRev;
 	int count = 0;
 	int index = 0;

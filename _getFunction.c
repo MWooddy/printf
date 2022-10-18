@@ -5,36 +5,34 @@
 
 /*Gets the specific function related to the
 format specifer*/
-int (*getFunction(char formatS))(va_list)
+int (*_getFunction(char format))(va_list)
 {
-	int counter1 = 0;
+	int count1 = 0;
 
-/*A struct of array that links the function to
-format specifier*/
-	_infoStructure specifer[] = {
+	_dataStruct identifier[] = {
+		{'b', _printBinary},
 		{'c', _printChar},
-		{'s', _printString},
-		{'i', _printNumber},
 		{'d', _printNumber},
+		{'i', _printNumber},
+		{'o', _printOctal},
+		{'p', _printP},
 		{'r', _printRevS},
 		{'R', _printRot13},
+		{'u', _printUnsigned},
+		{'s', _printString},
+		{'S', _printS},
+		{'x', _printHexLower},
+		{'X', _printHexUpper},
 		{'\0', NULL}
-		/*{'b', TODO},*/
-		/*{'u', TODO},*/
-		/*{'o', TODO},*/
-		/*{'x', TODO},*/
-		/*{'X', TODO},*/
-	};
-	/*cycle through the array to find the specific
-	specifier*/
-	while (specifer[counter1].symbol != '\0')
+	}
+
+	while (identifier[count1].symb != '\0')
 	{
-		if (formatS == specifer[counter1].symbol)
+		if (format == identifier[count1].symb)
 		{
-			/*when the condition is met return specific function*/
-			return (specifer[counter1].func);
+			return (identifier[count1].func);
 		}
-		counter1++;
+		count1++;
 	}
 	return (NULL);
 }
